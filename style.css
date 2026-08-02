@@ -1,18 +1,15 @@
+/* ================= المتغيرات الأساسية ================= */
 :root {
-    --bg-main: #FAF7F2;
-    /* اللون الجديد: تيفاني بلو - Tiffany Blue */
-    --tiffany-blue: #19C3BB; 
-    --tiffany-light: #81D8D0;
-    --tiffany-dark: #0ABAB5;
-    
-    /* لون داكن للنصوص للمقروئية */
-    --dark-text: #008080; 
+    /* تم سحب الألوان بدقة من الجزء العلوي للتصميم (الخلفية والنصوص والأيقونات) */
+    --bg-main: #F4EDE4;          /* لون الخلفية الكريمي/الرملي الفاتح جداً */
+    --main-navy: #2A4B62;        /* اللون الأزرق الداكن (Slate Blue) الأساسي للنصوص والدوائر والأزرار */
+    --main-light-blue: #648296;  /* أزرق أفتح مستوحى من أوراق الشجر للاستخدام في تأثيرات التمرير (Hover) */
     
     --white: #FFFFFF;
     
-    /* ظل بلون التيفاني */
-    --shadow: 0 8px 24px rgba(0, 163, 163, 0.08); 
-    --tiffany-glow: 0 10px 20px rgba(25, 195, 187, 0.3);
+    /* ظلال متناسقة مع اللون الأزرق الداكن */
+    --shadow: 0 8px 24px rgba(42, 75, 98, 0.08); 
+    --main-glow: 0 10px 20px rgba(42, 75, 98, 0.2);
 }
 
 * {
@@ -25,7 +22,7 @@
 body {
     font-family: 'Tajawal', sans-serif;
     background-color: var(--bg-main);
-    color: var(--dark-text); 
+    color: var(--main-navy); 
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -40,11 +37,9 @@ html[lang="en"] body {
 .top-header {
     text-align: center;
     padding: 25px 20px 15px;
-    background: rgba(255, 255, 255, 0.95); 
-    backdrop-filter: blur(5px);
-    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    background: transparent; 
     position: relative;
-    border-bottom: 3px solid var(--tiffany-blue); 
+    border-bottom: 1.5px solid var(--main-navy); 
     z-index: 10;
 }
 
@@ -56,7 +51,7 @@ html[lang="en"] body {
 }
 
 .logo-img {
-    height: 100px; 
+    height: 120px; 
     max-width: 90%;
     object-fit: contain;
 }
@@ -65,9 +60,9 @@ html[lang="en"] body {
     position: absolute;
     top: 20px;
     left: 20px;
-    background: var(--bg-main);
-    border: 1px solid var(--tiffany-blue); 
-    color: var(--dark-text); 
+    background: transparent;
+    border: 1.5px solid var(--main-navy); 
+    color: var(--main-navy); 
     padding: 6px 14px;
     border-radius: 20px;
     cursor: pointer;
@@ -83,9 +78,9 @@ html[lang="en"] .lang-btn {
 }
 
 .lang-btn:hover {
-    background: var(--tiffany-blue); 
+    background: var(--main-navy); 
     color: var(--white);
-    box-shadow: var(--tiffany-glow);
+    box-shadow: var(--main-glow);
 }
 
 /* ================= الحاوية الرئيسية ================= */
@@ -95,23 +90,23 @@ html[lang="en"] .lang-btn {
     margin: 25px auto;
     padding: 0 20px;
     flex: 1;
-    position: relative; /* إضافة ضرورية عشان الشعار يبدأ منها */
+    position: relative;
 }
 
-/* ================= خلفية الشعار (Watermark) بعد التعديل ================= */
+/* ================= خلفية الشعار المائية (Watermark) ================= */
 #bg-watermark {
     position: absolute;
-    top: -25px; /* يلتصق بخط الهيدر السفلي مباشرة */
+    top: -25px; 
     left: 50%;
     transform: translateX(-50%); 
-    width: 100vw; /* يأخذ مساحة الشاشة بالكامل بالعرض */
-    height: 600px; /* المسافة اللي هينزلها الشعار قبل ما يختفي */
+    width: 100vw; 
+    height: 600px; 
     z-index: -1;
-    background-position: top center; /* يثبت الشعار في الأعلى */
+    background-position: top center; 
     background-repeat: no-repeat;
     pointer-events: none; 
     
-    /* ✨ اللمسة الفنية: تأثير التلاشي التدريجي للأسفل ✨ */
+    /* تأثير تلاشي تدريجي */
     -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
     mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
 }
@@ -120,8 +115,9 @@ html[lang="en"] .lang-btn {
     text-align: center;
     margin: 30px 0 20px;
     font-size: 1.6rem;
-    color: var(--tiffany-blue); 
+    color: var(--main-navy); 
     position: relative;
+    font-weight: 700;
 }
 
 /* ================= شبكة الأقسام (الدوائر) ================= */
@@ -137,9 +133,9 @@ html[lang="en"] .lang-btn {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    border: 2px solid transparent;
-    background-color: rgba(255, 255, 255, 0.9);
-    color: var(--dark-text); 
+    border: 1.5px solid var(--main-navy);
+    background-color: transparent;
+    color: var(--main-navy); 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -148,13 +144,12 @@ html[lang="en"] .lang-btn {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     text-align: center;
     padding: 5px;
-    box-shadow: var(--shadow);
 }
 
 .category-circle .icon {
     font-size: 2rem;
     margin-bottom: 8px;
-    color: var(--tiffany-blue); 
+    color: var(--main-navy); 
     transition: 0.3s;
 }
 
@@ -178,11 +173,10 @@ html[lang="en"] .lang-btn {
 }
 
 .category-circle.active, .category-circle:hover {
-    transform: translateY(-5px) scale(1.05);
-    border-color: var(--tiffany-blue); 
-    box-shadow: var(--tiffany-glow);
-    background-color: var(--tiffany-blue); 
+    transform: translateY(-5px);
+    background-color: var(--main-navy); 
     color: var(--white);
+    box-shadow: var(--main-glow);
 }
 
 .category-circle.active .icon, .category-circle:hover .icon {
@@ -234,26 +228,26 @@ html[lang="en"] .lang-btn {
 
 .product-card h3 {
     font-size: 1.1rem;
-    color: var(--tiffany-blue); 
+    color: var(--main-navy); 
     margin-bottom: 12px;
     line-height: 1.3;
     flex-grow: 1; 
     display: flex;
     align-items: center;
-    text-shadow: 0 0 10px rgba(250, 247, 242, 0.8);
+    font-weight: 700;
 }
 
 .product-card .price {
     font-weight: 700;
     color: var(--white); 
-    background: var(--tiffany-blue); 
+    background: var(--main-navy); 
     padding: 6px 15px;
     border-radius: 20px;
-    border: 1px solid var(--tiffany-light);
+    border: none;
     font-size: 1rem;
     width: auto; 
     display: inline-block;
-    box-shadow: 0 4px 10px rgba(25, 195, 187, 0.2);
+    box-shadow: 0 4px 10px rgba(42, 75, 98, 0.2);
 }
 
 /* ================= الفوتر ================= */
@@ -261,17 +255,15 @@ html[lang="en"] .lang-btn {
     text-align: center;
     margin-top: 50px;
     padding: 40px 20px;
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(5px);
-    border-radius: 30px 30px 0 0;
-    box-shadow: 0 -4px 20px rgba(0,0,0,0.03);
-    border-top: 2px solid var(--tiffany-blue); 
+    background-color: transparent;
+    border-top: 1.5px solid var(--main-navy); 
 }
 
 .contact-footer h3 {
-    color: var(--tiffany-blue); 
+    color: var(--main-navy); 
     font-size: 1.2rem;
     margin-bottom: 20px;
+    font-weight: 700;
 }
 
 .social-icons {
@@ -287,21 +279,20 @@ html[lang="en"] .lang-btn {
     justify-content: center;
     width: 45px;
     height: 45px;
-    background-color: var(--bg-main);
-    color: var(--dark-text); 
+    background-color: transparent;
+    color: var(--main-navy); 
     border-radius: 50%;
     font-size: 1.4rem;
     text-decoration: none;
     transition: all 0.3s ease;
-    border: 1px solid var(--tiffany-light);
+    border: 1.5px solid var(--main-navy);
 }
 
 .social-link:hover {
-    background-color: var(--tiffany-blue); 
+    background-color: var(--main-navy); 
     color: var(--white);
     transform: translateY(-4px);
-    border-color: var(--tiffany-blue);
-    box-shadow: var(--tiffany-glow);
+    box-shadow: var(--main-glow);
 }
 
 .phone-number, .location-link {
@@ -311,27 +302,31 @@ html[lang="en"] .lang-btn {
     align-items: center;
     justify-content: center;
     gap: 10px;
+    background: var(--main-navy);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 25px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .phone-number a, .location-link a, .location-link .location-text {
-    color: var(--dark-text); 
+    color: var(--white); 
     text-decoration: none;
     font-weight: 700;
     transition: 0.3s;
 }
 
 .location-link i, .phone-number i {
-    color: var(--tiffany-blue); 
-}
-
-.phone-number a:hover, .location-link a:hover {
-    color: var(--tiffany-blue); 
+    color: var(--white); 
 }
 
 .copyright {
     font-size: 0.9rem;
-    color: #7A6858;
+    color: var(--main-navy);
     margin-top: 20px;
+    opacity: 0.8;
 }
 
 /* ================= النافذة المنبثقة (Modal) ================= */
@@ -342,7 +337,7 @@ html[lang="en"] .lang-btn {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); 
+    background-color: rgba(42, 75, 98, 0.7); 
     z-index: 1000;
     overflow-y: auto; 
     padding: 20px 15px; 
@@ -356,8 +351,8 @@ html[lang="en"] .lang-btn {
 }
 
 .modal-content {
-    background-color: var(--white); 
-    border: 1px solid var(--tiffany-light); 
+    background-color: var(--bg-main); 
+    border: 1.5px solid var(--main-navy); 
     border-radius: 15px;
     width: 100%;
     max-width: 400px;
@@ -369,7 +364,7 @@ html[lang="en"] .lang-btn {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    box-shadow: 0 10px 30px rgba(0, 163, 163, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .modal-overlay.active .modal-content {
@@ -382,24 +377,23 @@ html[lang="en"] .lang-btn {
     right: -15px;
     width: 36px;
     height: 36px;
-    background-color: var(--white);
-    border: 2px solid var(--tiffany-light);
+    background-color: var(--bg-main);
+    border: 1.5px solid var(--main-navy);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--tiffany-blue); 
+    color: var(--main-navy); 
     font-size: 1.1rem;
     cursor: pointer;
     z-index: 20;
-    box-shadow: 0 4px 10px rgba(0, 163, 163, 0.15);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 }
 
 .close-btn:hover {
-    background-color: var(--tiffany-blue); 
+    background-color: var(--main-navy); 
     color: var(--white);
-    border-color: var(--tiffany-blue);
 }
 
 html[dir="rtl"] .close-btn {
@@ -417,7 +411,7 @@ html[dir="rtl"] .close-btn {
 }
 
 .modal-title {
-    color: var(--tiffany-blue); 
+    color: var(--main-navy); 
     text-align: center;
     font-size: 1.4rem;
     margin: 0;
@@ -426,11 +420,12 @@ html[dir="rtl"] .close-btn {
 
 .modal-desc {
     text-align: center;
-    color: #7A6858;
+    color: var(--main-navy);
     font-size: 0.9rem;
     margin-top: -5px;
     margin-bottom: 5px;
     line-height: 1.4;
+    opacity: 0.8;
 }
 
 .modal-info-grid {
@@ -448,7 +443,7 @@ html[dir="rtl"] .close-btn {
 }
 
 .section-label {
-    color: var(--dark-text); 
+    color: var(--main-navy); 
     text-align: center;
     font-size: 0.95rem;
     margin: 0;
@@ -460,12 +455,12 @@ html[dir="rtl"] .close-btn {
 }
 
 .info-box {
-    background-color: var(--bg-main); 
+    background-color: transparent; 
     border-radius: 8px;
     padding: 12px 10px;
     text-align: center;
-    color: var(--tiffany-blue); 
-    border: 1px solid var(--tiffany-light); 
+    color: var(--main-navy); 
+    border: 1.5px solid var(--main-navy); 
     flex-grow: 1; 
     display: flex;
     align-items: center;
@@ -480,23 +475,23 @@ html[dir="rtl"] .close-btn {
 }
 
 .size-row {
-    background-color: var(--bg-main);
+    background-color: transparent;
     border-radius: 8px;
     padding: 12px 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid var(--tiffany-light);
+    border: 1.5px solid var(--main-navy);
 }
 
 .size-row .size-name {
-    color: var(--dark-text); 
+    color: var(--main-navy); 
     font-weight: 700;
     font-size: 0.95rem;
 }
 
 .size-row .size-price {
-    color: var(--tiffany-blue); 
+    color: var(--main-navy); 
     font-weight: bold;
     font-size: 0.95rem;
 }
@@ -566,6 +561,6 @@ html[dir="rtl"] .close-btn {
         padding: 50px 10%;
     }
     .contact-footer h3 { width: 100%; margin-bottom: 30px; }
-    .social-icons, .phone-number, .location-link { margin-bottom: 0; }
+    .social-icons, .phone-number, .location-link { margin-bottom: 0; margin-left: 0; margin-right: 0;}
     .copyright { width: 100%; margin-top: 40px; }
 }
