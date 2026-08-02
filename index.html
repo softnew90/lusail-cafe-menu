@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="html-root">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUSAIL - Menu</title>
+    <!-- الخطوط وأيقونات Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- طبقة خلفية الشعار (Watermark) -->
+    <div id="bg-watermark"></div>
+
+    <!-- الهيدر اللغوي واللوجو -->
+    <header class="top-header">
+        <button id="lang-btn" class="lang-btn">English</button>
+        
+        <!-- قسم الشعار الجديد -->
+        <div class="logo-area">
+            <!-- مسار الصورة سيتم سحبه تلقائياً من الإعدادات -->
+            <img id="brand-logo" src="" alt="Logo" class="logo-img">
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <!-- قسم الفئات (الدوائر العلوية) -->
+        <section class="categories-section">
+            <div id="categories-grid" class="categories-grid">
+                <!-- سيتم توليد الأقسام هنا بواسطة الجافاسكريبت -->
+            </div>
+        </section>
+
+        <!-- عنوان القسم المختار حالياً -->
+        <h2 id="current-category-title" class="section-title"></h2>
+
+        <!-- قسم المنتجات -->
+        <section class="products-section">
+            <div id="products-grid" class="products-grid">
+                <!-- سيتم توليد المنتجات هنا بواسطة الجافاسكريبت -->
+            </div>
+        </section>
+
+    </div>
+
+    <!-- الفوتر -->
+    <footer class="contact-footer">
+        <h3 data-ar="تواصل معنا" data-en="Contact Us">تواصل معنا</h3>
+        
+        <div class="social-icons">
+            <a href="https://api.whatsapp.com/send?phone=966509187294" target="_blank" class="social-link"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/lucilleresortsa?igsh=N3I1aTZmcDR4bDRy&utm_source=qr" target="_blank" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@lucilleresort.sa" target="_blank" class="social-link"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+
+        <div class="phone-number">
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:0509187294" dir="ltr">0509187294</a>
+        </div>
+
+        <div class="location-link">
+            <i class="fa-solid fa-location-dot"></i>
+            <span class="location-text" data-ar="الطائف - الهدا - طريق الهدا مكه" data-en="Taif - Al Hada - Taif Al Hada main road">الطائف - الهدا - طريق الهدا مكه</span>
+        </div>
+        
+        <p class="copyright" data-ar="© 2026 لوسيل كافيه. جميع الحقوق محفوظة." data-en="© 2026 Lusail Cafe. All rights reserved.">© 2026 لوسيل كافيه. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <!-- النافذة المنبثقة للمنتج (Modal) -->
+    <div id="product-modal" class="modal-overlay">
+        <div class="modal-content">
+            <!-- زر الإغلاق -->
+            <span class="close-btn" onclick="closeModal()">
+                <i class="fa-solid fa-xmark"></i>
+            </span>
+            
+            <!-- صورة واسم المنتج -->
+            <img id="modal-img" src="" alt="Product Image">
+            <h3 id="modal-title" class="modal-title"></h3>
+            <!-- وصف المنتج داخل النافذة -->
+            <p id="modal-desc" class="modal-desc"></p>
+
+            <!-- قسم المعلومات (سعرات - حساسية) شبكة من صندوقين -->
+            <div id="modal-info-grid" class="modal-info-grid">
+                <div class="modal-section" id="modal-allergens-section">
+                    <h4 class="section-label" data-ar="المواد المسببة للحساسية" data-en="Allergens">المواد المسببة للحساسية</h4>
+                    <div class="info-box">
+                        <span id="modal-allergens" class="allergens-value"></span>
+                    </div>
+                </div>
+                <div class="modal-section" id="modal-calories-section">
+                    <h4 class="section-label" data-ar="السعرات الحرارية" data-en="Calories">السعرات الحرارية</h4>
+                    <div class="info-box">
+                        <span id="modal-calories" class="calories-value"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- قسم الأحجام والأسعار -->
+            <div class="modal-section">
+                <h4 class="section-label" data-ar="الأحجام والأسعار" data-en="Sizes & Prices">الأحجام والأسعار</h4>
+                <!-- الحاوية التي سيتم توليد الأحجام بداخلها -->
+                <div id="modal-sizes-container" class="sizes-container">
+                    <!-- سيتم إضافة الصفوف هنا بواسطة JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- استدعاء ملف البيانات أولاً، ثم ملف الأكواد -->
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
