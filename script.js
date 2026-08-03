@@ -35,6 +35,7 @@ function renderProducts() {
     const activeCat = categoriesData.find(c => c.id === activeCategoryId);
     if (!activeCat) return;
 
+    // إعادة العنوان ليعرض اسم القسم فقط
     title.setAttribute('data-ar', activeCat.nameAr);
     title.setAttribute('data-en', activeCat.nameEn);
     title.textContent = currentLang === 'ar' ? activeCat.nameAr : activeCat.nameEn;
@@ -42,7 +43,7 @@ function renderProducts() {
     const filteredItems = menuItems.filter(item => item.category === activeCategoryId);
 
     if (filteredItems.length === 0) {
-        grid.innerHTML = `<p style="grid-column: span 2; text-align: center; color: var(--tiffany-blue); padding: 20px;">
+        grid.innerHTML = `<p style="grid-column: span 2; text-align: center; color: var(--main-navy); padding: 20px;">
                             ${currentLang === 'ar' ? 'عفواً، لا توجد منتجات متاحة حالياً في هذا القسم.' : 'Sorry, no products available in this category yet.'}
                           </p>`;
         return;
@@ -89,10 +90,28 @@ function selectCategory(categoryId) {
 const langBtn = document.getElementById('lang-btn');
 const htmlRoot = document.getElementById('html-root');
 
+// دالة مخصصة لتغيير الخط المميز بناءً على اللغة (لعنوان الترحيب)
+function updateWelcomeFont() {
+    const welcomeMsg = document.getElementById('welcome-message');
+    if (welcomeMsg) {
+        if (currentLang === 'ar') {
+            welcomeMsg.style.fontFamily = "'Amiri', 'Tajawal', serif";
+            welcomeMsg.style.letterSpacing = '0px';
+            welcomeMsg.style.fontSize = '1.7rem';
+        } else {
+            welcomeMsg.style.fontFamily = "'Cinzel', 'Playfair Display', 'Poppins', serif";
+            welcomeMsg.style.letterSpacing = '2px';
+            welcomeMsg.style.fontSize = '1.5rem';
+        }
+    }
+}
+
 function updateLanguageTexts() {
     document.querySelectorAll('[data-ar]').forEach(element => {
         element.textContent = element.getAttribute(`data-${currentLang}`);
     });
+    
+    updateWelcomeFont(); // تحديث خط الترحيب عند تغيير اللغة
     renderCategories();
     renderProducts();
 }
@@ -196,21 +215,47 @@ window.addEventListener('click', (event) => {
     }
 });
 
-// عند تحميل الصفحة، يتم سحب الإعدادات من ملف data.js
+// عند تحميل الصفحة
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. تحديث الشعار في الهيدر
+    // 1. تحديث الشعار في الهيدر الرئيسي
     const logoElement = document.getElementById('brand-logo');
-    if (logoElement && siteSettings) {
+    if (logoElement && typeof siteSettings !== 'undefined') {
         logoElement.src = siteSettings.logo;
         logoElement.alt = siteSettings.logoAltText;
     }
 
-    // 2. إعداد خلفية الشعار المائية (Watermark)
+    // 2. إنشاء عبارة الترحيب أسفل الشعار الرئيسي برمجياً
+    const logoArea = document.querySelector('.logo-area');
+    if (logoArea && !document.getElementById('welcome-message')) {
+        // تعديل الـ CSS الخاص بالهيدر ليكون ترتيب الشعار والنص عمودياً
+        logoArea.style.flexDirection = 'column';
+
+        const welcomeMsg = document.createElement('h2');
+        welcomeMsg.id = 'welcome-message';
+        // إضافة السمات الخاصة باللغتين ليتم التبديل بينهما تلقائياً
+        welcomeMsg.setAttribute('data-ar', 'مرحباً بكم في لوسيل');
+        welcomeMsg.setAttribute('data-en', 'Welcome to Lusail');
+        welcomeMsg.textContent = currentLang === 'ar' ? 'مرحباً بكم في لوسيل' : 'Welcome to Lusail';
+        
+        // تنسيقات النص ليكون أنيقاً ومتناسقاً
+        welcomeMsg.style.marginTop = '15px';
+        welcomeMsg.style.marginBottom = '0';
+        welcomeMsg.style.color = 'var(--main-navy)';
+        welcomeMsg.style.fontWeight = '700';
+        welcomeMsg.style.textAlign = 'center';
+
+        // إضافة النص تحت الشعار
+        logoArea.appendChild(welcomeMsg);
+        
+        // تطبيق الخط المخصص للغة الحالية
+        updateWelcomeFont();
+    }
+
+    // 3. التأكد من إخفاء شعار الخلفية المائية تماماً
     const bgWatermark = document.getElementById('bg-watermark');
-    if (bgWatermark && siteSettings && siteSettings.bgLogo) {
-        bgWatermark.style.backgroundImage = `url('${siteSettings.bgLogo}')`;
-        bgWatermark.style.opacity = siteSettings.bgOpacity;
-        bgWatermark.style.backgroundSize = siteSettings.bgSize;
+    if (bgWatermark) {
+        bgWatermark.style.display = 'none';
+        bgWatermark.style.backgroundImage = 'none';
     }
 
     renderCategories();
