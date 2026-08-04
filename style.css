@@ -1,13 +1,9 @@
 /* ================= المتغيرات الأساسية ================= */
 :root {
-    /* تم سحب الألوان بدقة من الجزء العلوي للتصميم (الخلفية والنصوص والأيقونات) */
-    --bg-main: #F4EDE4;          /* لون الخلفية الكريمي/الرملي الفاتح جداً */
-    --main-navy: #2A4B62;        /* اللون الأزرق الداكن (Slate Blue) الأساسي للنصوص والدوائر والأزرار */
-    --main-light-blue: #648296;  /* أزرق أفتح مستوحى من أوراق الشجر للاستخدام في تأثيرات التمرير (Hover) */
-    
+    --bg-main: #F4EDE4;
+    --main-navy: #2A4B62;
+    --main-light-blue: #648296;
     --white: #FFFFFF;
-    
-    /* ظلال متناسقة مع اللون الأزرق الداكن */
     --shadow: 0 8px 24px rgba(42, 75, 98, 0.08); 
     --main-glow: 0 10px 20px rgba(42, 75, 98, 0.2);
 }
@@ -93,7 +89,7 @@ html[lang="en"] .lang-btn {
     position: relative;
 }
 
-/* ================= خلفية الشعار المائية (Watermark) ================= */
+/* ================= خلفية الشعار المائية ================= */
 #bg-watermark {
     position: absolute;
     top: -25px; 
@@ -105,8 +101,6 @@ html[lang="en"] .lang-btn {
     background-position: top center; 
     background-repeat: no-repeat;
     pointer-events: none; 
-    
-    /* تأثير تلاشي تدريجي */
     -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
     mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 100%);
 }
@@ -257,12 +251,15 @@ html[lang="en"] .lang-btn {
     padding: 40px 20px;
     background-color: transparent;
     border-top: 1.5px solid var(--main-navy); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
 }
 
 .contact-footer h3 {
     color: var(--main-navy); 
     font-size: 1.2rem;
-    margin-bottom: 20px;
     font-weight: 700;
 }
 
@@ -270,7 +267,6 @@ html[lang="en"] .lang-btn {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-bottom: 25px;
 }
 
 .social-link {
@@ -295,8 +291,7 @@ html[lang="en"] .lang-btn {
     box-shadow: var(--main-glow);
 }
 
-.phone-number, .location-link {
-    margin-bottom: 15px;
+.phone-number {
     font-size: 1.1rem;
     display: flex;
     align-items: center;
@@ -307,29 +302,79 @@ html[lang="en"] .lang-btn {
     padding: 10px 20px;
     border-radius: 25px;
     width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
-.phone-number a, .location-link a, .location-link .location-text {
+.phone-number:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--main-glow);
+}
+
+.phone-number a, .phone-number i {
     color: var(--white); 
     text-decoration: none;
     font-weight: 700;
-    transition: 0.3s;
 }
 
-.location-link i, .phone-number i {
-    color: var(--white); 
+/* تنسيقات الموقع والزر الدائري الجديد */
+.location-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.location-text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: var(--main-navy);
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.circle-map-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 1.5px solid var(--main-navy);
+    background-color: transparent;
+    color: var(--main-navy); 
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.circle-map-btn i {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.circle-map-btn span {
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.circle-map-btn:hover {
+    transform: translateY(-5px);
+    background-color: var(--main-navy); 
+    color: var(--white);
+    box-shadow: var(--main-glow);
 }
 
 .copyright {
     font-size: 0.9rem;
     color: var(--main-navy);
-    margin-top: 20px;
     opacity: 0.8;
 }
 
-/* ================= النافذة المنبثقة (Modal) ================= */
+/* ================= النافذة المنبثقة ================= */
 .modal-overlay {
     display: none; 
     position: fixed;
@@ -506,7 +551,15 @@ html[dir="rtl"] .close-btn {
         font-size: 1.5rem;
     }
     .products-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 10px; 
+    }
+    .product-card h3 {
+        font-size: 1rem; 
+    }
+    .product-card .price {
+        font-size: 0.9rem; 
+        padding: 5px 10px;
     }
 }
 
@@ -554,13 +607,11 @@ html[dir="rtl"] .close-btn {
     .product-card .price { font-size: 1.1rem; padding: 10px 20px; }
     
     .contact-footer {
-        display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
-        align-items: center;
         padding: 50px 10%;
     }
-    .contact-footer h3 { width: 100%; margin-bottom: 30px; }
-    .social-icons, .phone-number, .location-link { margin-bottom: 0; margin-left: 0; margin-right: 0;}
-    .copyright { width: 100%; margin-top: 40px; }
+    .contact-footer h3 { width: 100%; margin-bottom: 20px; }
+    .copyright { width: 100%; margin-top: 30px; }
 }

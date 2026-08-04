@@ -15,22 +15,21 @@
     <header class="top-header">
         <button id="lang-btn" class="lang-btn">English</button>
         
-        <!-- قسم الشعار الجديد -->
+        <!-- قسم الشعار -->
         <div class="logo-area">
-            <!-- مسار الصورة سيتم سحبه تلقائياً من الإعدادات -->
             <img id="brand-logo" src="" alt="Logo" class="logo-img">
         </div>
     </header>
 
     <div class="container">
         
-        <!-- طبقة خلفية الشعار (Watermark) تم نقلها هنا لتبدأ مع المحتوى -->
+        <!-- طبقة خلفية الشعار (Watermark) -->
         <div id="bg-watermark"></div>
         
         <!-- قسم الفئات (الدوائر العلوية) -->
         <section class="categories-section">
             <div id="categories-grid" class="categories-grid">
-                <!-- سيتم توليد الأقسام هنا بواسطة الجافاسكريبت -->
+                <!-- سيتم توليد الأقسام هنا -->
             </div>
         </section>
 
@@ -40,7 +39,7 @@
         <!-- قسم المنتجات -->
         <section class="products-section">
             <div id="products-grid" class="products-grid">
-                <!-- سيتم توليد المنتجات هنا بواسطة الجافاسكريبت -->
+                <!-- سيتم توليد المنتجات هنا -->
             </div>
         </section>
 
@@ -61,9 +60,17 @@
             <a href="tel:0509187294" dir="ltr">0509187294</a>
         </div>
 
-        <div class="location-link">
-            <i class="fa-solid fa-location-dot"></i>
-            <span class="location-text" data-ar="الطائف - الهدا - طريق الهدا مكه" data-en="Taif - Al Hada - Taif Al Hada main road">الطائف - الهدا - طريق الهدا مكه</span>
+        <!-- قسم الموقع (النص وتحته الزر الدائري) -->
+        <div class="location-group">
+            <div class="location-text-container">
+                <i class="fa-solid fa-location-dot"></i>
+                <span class="location-text" data-ar="الطائف - الهدا - طريق الهدا مكه" data-en="Taif - Al Hada - Taif Al Hada main road">الطائف - الهدا - طريق الهدا مكه</span>
+            </div>
+            
+            <a href="https://www.google.com/maps?q=21.366893768310547,40.27826690673828" target="_blank" class="circle-map-btn">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <span data-ar="الخريطة" data-en="Map">الخريطة</span>
+            </a>
         </div>
         
         <p class="copyright" data-ar="© 2026 لوسيل كافيه. جميع الحقوق محفوظة." data-en="© 2026 Lusail Cafe. All rights reserved.">© 2026 لوسيل كافيه. جميع الحقوق محفوظة.</p>
@@ -72,18 +79,14 @@
     <!-- النافذة المنبثقة للمنتج (Modal) -->
     <div id="product-modal" class="modal-overlay">
         <div class="modal-content">
-            <!-- زر الإغلاق -->
             <span class="close-btn" onclick="closeModal()">
                 <i class="fa-solid fa-xmark"></i>
             </span>
             
-            <!-- صورة واسم المنتج -->
             <img id="modal-img" src="" alt="Product Image">
             <h3 id="modal-title" class="modal-title"></h3>
-            <!-- وصف المنتج داخل النافذة -->
             <p id="modal-desc" class="modal-desc"></p>
 
-            <!-- قسم المعلومات (سعرات - حساسية) شبكة من صندوقين -->
             <div id="modal-info-grid" class="modal-info-grid">
                 <div class="modal-section" id="modal-allergens-section">
                     <h4 class="section-label" data-ar="المواد المسببة للحساسية" data-en="Allergens">المواد المسببة للحساسية</h4>
@@ -99,18 +102,16 @@
                 </div>
             </div>
 
-            <!-- قسم الأحجام والأسعار -->
             <div class="modal-section">
                 <h4 class="section-label" data-ar="الأحجام والأسعار" data-en="Sizes & Prices">الأحجام والأسعار</h4>
-                <!-- الحاوية التي سيتم توليد الأحجام بداخلها -->
                 <div id="modal-sizes-container" class="sizes-container">
-                    <!-- سيتم إضافة الصفوف هنا بواسطة JS -->
+                    <!-- سيتم إضافة الصفوف هنا -->
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- استدعاء ملف البيانات أولاً، ثم ملف الأكواد -->
+    <!-- استدعاء ملف البيانات والسكريبت -->
     <script src="data.js"></script>
     <script src="script.js"></script>
 </body>
