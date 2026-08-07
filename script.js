@@ -93,15 +93,26 @@ const htmlRoot = document.getElementById('html-root');
 // دالة مخصصة لتغيير الخط المميز بناءً على اللغة (لعنوان الترحيب)
 function updateWelcomeFont() {
     const welcomeMsg = document.getElementById('welcome-message');
+    const subtitleMsg = document.getElementById('subtitle-message');
     if (welcomeMsg) {
         if (currentLang === 'ar') {
             welcomeMsg.style.fontFamily = "'Amiri', 'Tajawal', serif";
             welcomeMsg.style.letterSpacing = '0px';
             welcomeMsg.style.fontSize = '1.7rem';
+            
+            if (subtitleMsg) {
+                subtitleMsg.style.fontFamily = "'Amiri', 'Tajawal', serif";
+                subtitleMsg.style.letterSpacing = '0px';
+            }
         } else {
             welcomeMsg.style.fontFamily = "'Cinzel', 'Playfair Display', 'Poppins', serif";
             welcomeMsg.style.letterSpacing = '2px';
             welcomeMsg.style.fontSize = '1.5rem';
+            
+            if (subtitleMsg) {
+                subtitleMsg.style.fontFamily = "'Cinzel', 'Playfair Display', 'Poppins', serif";
+                subtitleMsg.style.letterSpacing = '1px';
+            }
         }
     }
 }
@@ -246,6 +257,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // إضافة النص تحت الشعار
         logoArea.appendChild(welcomeMsg);
+
+        // -- إضافة الجملة الجديدة أسفل الترحيب --
+        const subtitleMsg = document.createElement('h3');
+        subtitleMsg.id = 'subtitle-message';
+        subtitleMsg.setAttribute('data-ar', 'مقهي لوسيل الدور التالت');
+        subtitleMsg.setAttribute('data-en', 'Lusail Cafe 3rd Floor');
+        subtitleMsg.textContent = currentLang === 'ar' ? 'مقهي لوسيل الدور التالت' : 'Lusail Cafe 3rd Floor';
+        
+        subtitleMsg.style.marginTop = '5px'; // مسافة بسيطة من العنوان الذي فوقه
+        subtitleMsg.style.marginBottom = '0';
+        subtitleMsg.style.color = 'var(--main-navy)';
+        subtitleMsg.style.fontWeight = '600';
+        subtitleMsg.style.textAlign = 'center';
+        subtitleMsg.style.fontSize = '1.1rem';
+
+        logoArea.appendChild(subtitleMsg);
         
         // تطبيق الخط المخصص للغة الحالية
         updateWelcomeFont();
