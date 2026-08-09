@@ -41,7 +41,7 @@ const menuItems = [
     },
        {
         category: "hot",
-        image: "assets/2.jpg", 
+        image: "assets/sh.jpg", 
         nameAr: "براد شاهي",
         nameEn: "Teapot",
         descAr: "",
@@ -498,6 +498,300 @@ const menuItems = [
         allergensEn: "Tree nuts - Dairy products - soy",
         sizes: [
             { nameAr: "عادي", nameEn: "Regular", priceAr: "30.00 ريال", priceEn: "30.00 SAR", val: 30 }
+        ]
+    },
+     {
+        category: "desserts", 
+        image: "assets/Honey Cake.png", 
+        nameAr: "كيكة العسل",
+        nameEn: "Honey Cake",
+        descAr: "",
+        descEn: "",
+        calories: "",
+        sizes: [
+            { nameAr: "عادي", nameEn: "Regular", priceAr: "24.00 ريال", priceEn: "24.00 SAR", val: 24 }
+        ]
+    },
+     {
+        category: "desserts", 
+        image: "assets/Chocolate Soufflé Fondant.png", 
+        nameAr: "سوفليه فوندوم",
+        nameEn: "Chocolate Soufflé Fondant",
+        descAr: "",
+        descEn: "",
+        calories: "45",
+        sizes: [
+            { nameAr: "عادي", nameEn: "Regular", priceAr: "22.00 ريال", priceEn: "22.00 SAR", val: 22 }
+        ]
+    }, 
+    {
+        category: "desserts", 
+        image: "assets/galaxy cake.png", 
+        nameAr: "كيكة الجالكسي",
+        nameEn: "galaxy cake",
+        descAr: "",
+        descEn: "",
+        calories: "320",
+        allergensAr: "حليب - بيض - جلوتين",
+        allergensEn: "Milk - Eggs - Gluten",
+        sizes: [
+            { nameAr: "عادي", nameEn: "Regular", priceAr: "27.00 ريال", priceEn: "27.00 SAR", val: 27 }
+        ]
+    }, 
+    {
+        category: "desserts", 
+        image: "assets/chees rose berry.png", 
+        nameAr: "تشيز روز بيري",
+        nameEn: "chees rose berry",
+        descAr: "",
+        descEn: "",
+        calories: "320",
+        allergensAr: "(الجلوتين+البيض+الحليب ومشتقاته+المكسرات واثارها)",
+        allergensEn: "Milk - Eggs - Gluten - Nuts",
+        sizes: [
+            { nameAr: "عادي", nameEn: "Regular", priceAr: "28.00 ريال", priceEn: "28.00 SAR", val: 28 }
+        ]
+    }, 
+    {
+        category: "desserts", 
+        image: "assets/chocolate fudge.png", 
+        nameAr: "شوكليت فودج",
+        nameEn: "chocolate fudge",
+        descAr: "",
+        descEn: "",
+        calories: "310",
+        allergensAr: "حليب - بيض - جلوتين",
+        allergensEn: "Milk - Eggs - Gluten",
+        sizes: [
+            { nameAr: "عادي", nameEn: "Regular", priceAr: "24.00 ريال", priceEn: "24.00 SAR", val: 24 }
+        ]
+    },
+     {
+        category: "desserts", 
+        image: "assets/Cream Ma Latzer.png", 
+        nameAr: "ما لتيزر كريم",
+        nameEn: "Cream Ma Latzer",
+        descAr: "",
+        descEn: "",
+        calories: "530",
+        allergensAr: "حليب - المكسرات - جلوتين",
+        allergensEn: "Milk - Nuts - Gluten",
+        sizes: [
+            { nameAr: "عادي", nameEn: "Regular", priceAr: "24.00 ريال", priceEn: "24.00 SAR", val: 24 }
+        ]
+    },
+     {
+        category: "desserts", 
+        image: "assets/san sebastian.png", 
+        nameAr: "سان سبيستيان",
+        nameEn: "san sebastian",
+        descAr: "",
+        descEn: "",
+        calories: "430",
+        allergensAr: "حليب - المكسرات - جلوتين - بيض",
+        allergensEn: "Milk - Nuts - Gluten- Eggs",
+        sizes: [
+            { nameAr: "عادي", nameEn: "Regular", priceAr: "24.00 ريال", priceEn: "24.00 SAR", val: 24 }
+        ]
+    },
+     {
+        category: "desserts", 
+        image: "assets/cookies.png", 
+        nameAr: "كوكيز",
+        nameEn: "cookies",
+        descAr: "",
+        descEn: "",
+        calories: "",
+        sizes: [
+            { nameAr: "عادي", nameEn: "Regular", priceAr: "12.00 ريال", priceEn: "12.00 SAR", val: 12 }
+        ]
+    },
+    {
+        category: "Winter Lucille", 
+        image: "assets/Karak tea.jpeg", 
+        nameAr: "شاي كرك",
+        nameEn: "Karak tea",
+        descAr: "كركنا غير ..",
+        descEn: "",
+        calories: "125",
+        allergensAr: "(الحليب ومشتقاته)",
+        allergensEn: "Milk",
+        sizes: [
+            { nameAr: "عادي", nameEn: "Regular", priceAr: "10.00 ريال", priceEn: "10.00 SAR", val: 10 }
+        ]
+    },
+     {
+        category: "Winter Lucille", 
+        image: "assets/Hot sahlab.jpeg", 
+        nameAr: "سحلب",
+        nameEn: "Hot sahlab",
+        descAr: "أجواء الشتا والدفا عند كوفي لوسيل غير",
+        descEn: "",
+        calories: "170",
+        allergensAr: "(الحليب ومشتقاته +المكسرات واثارها)",
+        allergensEn: "Milk - Nuts",
+        sizes: [
+            { nameAr: "عادي", nameEn: "Regular", priceAr: "14.00 ريال", priceEn: "14.00 SAR", val: 14 }
+        ]
+    },
+     {
+        category: "specialty", 
+        image: "assets/Brazilian Premium V60 Coffee.jpeg", 
+        nameAr: "V60 برازيلي فاخر",
+        nameEn: "Brazilian Premium V60 Coffee",
+        descAr: "V60 برازيلي فاخر",
+        descEn: "Brazilian Premium V60 Coffee",
+        calories: "",
+        sizes: [
+            { nameAr: "عادي", nameEn: "Regular", priceAr: "25.00 ريال", priceEn: "25.00 SAR", val: 25 }
+        ]
+    },
+     {
+        category: "specialty", 
+        image: "assets/Brazilian Premium V60 Coffee.jpeg", 
+        nameAr: "V60 كولومبي",
+        nameEn: "Colombian V60",
+        descAr: "",
+        descEn: "",
+        calories: "50",
+        sizes: [
+            { nameAr: "عادي", nameEn: "Regular", priceAr: "20.00 ريال", priceEn: "20.00 SAR", val: 20 }
+        ]
+    }, 
+    {
+        category: "specialty", 
+        image: "assets/Today’s Coffee.jpeg", 
+        nameAr: "قهوة اليوم",
+        nameEn: "Today’s Coffee",
+        descAr: "",
+        descEn: "",
+        calories: "50",
+        sizes: [
+            { nameAr: "عادي", nameEn: "Regular", priceAr: "14.00 ريال", priceEn: "14.00 SAR", val: 14 }
+        ]
+    }, 
+    {
+        category: "specialty", 
+        image: "assets/Ethiopian V60.jpeg", 
+        nameAr: "V60 أثيوبي",
+        nameEn: "Ethiopian V60",
+        descAr: "",
+        descEn: "",
+        calories: "50",
+        sizes: [
+            { nameAr: "عادي", nameEn: "Regular", priceAr: "20.00 ريال", priceEn: "20.00 SAR", val: 20 }
+        ]
+    },
+    {
+        category: "baked", 
+        image: "assets/H.M.Freeze.jpeg", 
+        nameAr: "الو ميت فريز",
+        nameEn: "H.M.Freeze",
+        descAr: "",
+        descEn: "",
+        calories: "",
+        allergensAr: "جلوتين + بيض + حليب +اثار المكسرات",
+        allergensEn: "(Gluten + Eggs + Milk and dairy products + Nuts and their effects)",
+        sizes: [
+            { nameAr: "عادي", nameEn: "Regular", priceAr: "15.00 ريال", priceEn: "15.00 SAR", val: 15 }
+        ]
+    },
+     {
+        category: "baked", 
+        image: "assets/Croissant.jpeg", 
+        nameAr: "كرواسون",
+        nameEn: "Croissant",
+        descAr: "بحشوات متعدده جبنه بيضاء - جبنه تشيدر",
+        descEn: "",
+        calories: "350",
+        allergensAr: "جلوتين - الحليب - البيض",
+        allergensEn: "Gluten - Milk - Eggs",
+        sizes: [
+            { nameAr: "عادي", nameEn: "Regular", priceAr: "15.00 ريال", priceEn: "15.00 SAR", val: 15 }
+        ]
+    },
+     {
+        category: "baked", 
+        image: "assets/Raspberry Almonds & custard.jpeg", 
+        nameAr: "راسبيري بالوز والكاسترد",
+        nameEn: "Raspberry Almonds & custard",
+        descAr: "",
+        descEn: "",
+        calories: "",
+        allergensAr: "جلوتين - بيض - حليب - المكسرات",
+        allergensEn: "(Gluten + Eggs + Milk and dairy products + Nuts and their effects)",
+        sizes: [
+            { nameAr: "عادي", nameEn: "Regular", priceAr: "15.00 ريال", priceEn: "15.00 SAR", val: 15 }
+        ]
+    },
+     {
+        category: "baked", 
+        image: "assets/danish fruit.jpeg", 
+        nameAr: "دانيش فواكة",
+        nameEn: "danish fruit",
+        descAr: "",
+        descEn: "",
+        calories: "184",
+        allergensAr: "جلوتين + بيض + حليب +اثار المكسرات",
+        allergensEn: "(Gluten + Eggs + Milk and dairy products + Nuts and their effects)",
+        sizes: [
+            { nameAr: "عادي", nameEn: "Regular", priceAr: "16.00 ريال", priceEn: "16.00 SAR", val: 16 }
+        ]
+    },
+     {
+        category: "baked", 
+        image: "assets/danish fondan.jpeg", 
+        nameAr: "دانيش بالفوندان",
+        nameEn: "danish fondan",
+        descAr: "",
+        descEn: "",
+        calories: "115",
+        allergensAr: "(الجلوتين+البيض+الحليب ومشتقاته+المكسرات واثارها)",
+        allergensEn: "(Gluten + Eggs + Milk and dairy products + Nuts and their effects)",
+        sizes: [
+            { nameAr: "عادي", nameEn: "Regular", priceAr: "15.00 ريال", priceEn: "15.00 SAR", val: 15 }
+        ]
+    },
+     {
+        category: "baked", 
+        image: "assets/Labneh & Za'atar Danish.jpeg", 
+        nameAr: "دانيش لبنة وزعتر",
+        nameEn: "Labneh & Za'atar Danish",
+        descAr: "",
+        descEn: "",
+        calories: "",
+        allergensAr: "(الجلوتين+البيض+الحليب ومشتقاته+المكسرات واثارها)",
+        allergensEn: "(Gluten + Eggs + Milk and dairy products + Nuts and their effects)",
+        sizes: [
+            { nameAr: "عادي", nameEn: "Regular", priceAr: "16.00 ريال", priceEn: "16.00 SAR", val: 16 }
+        ]
+    },
+     {
+        category: "Lucille Summer", 
+        image: "assets/Ice cream.jpeg", 
+        nameAr: "ايسكريم",
+        nameEn: "Ice cream",
+        descAr: "متعدد النكهات فانيلا - فراوله",
+        descEn: "",
+        calories: "137",
+        allergensAr: "الحليب - المكسرات",
+        allergensEn: "Milk - Nuts",
+        sizes: [
+            { nameAr: "عادي", nameEn: "Regular", priceAr: "10.00 ريال", priceEn: "10.00 SAR", val: 10 }
+        ]
+    },
+     {
+        category: "Lucille Summer", 
+        image: "assets/Ice Cream with cookie.jpeg", 
+        nameAr: "ايسكريم مع كوكيز",
+        nameEn: "Ice Cream with cookie",
+        descAr: "",
+        descEn: "",
+        calories: "714",
+        allergensAr: "حليب - بيض - القمح",
+        allergensEn: "Milk - egg - wheat",
+        sizes: [
+            { nameAr: "عادي", nameEn: "Regular", priceAr: "18.00 ريال", priceEn: "18.00 SAR", val: 18 }
         ]
     },
 ];
