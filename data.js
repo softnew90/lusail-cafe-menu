@@ -606,6 +606,42 @@ const menuItems = [
             { nameAr: "عادي", nameEn: "Regular", priceAr: "12.00 ريال", priceEn: "12.00 SAR", val: 12 }
         ]
     },
+     {
+        category: "desserts", 
+        image: "assets/Crunch Choco Cake.jpeg", 
+        nameAr: "كرانش شوكو كيك",
+        nameEn: "Crunch Choco Cake",
+        descAr: "كيكة شوكولاتة غنية بطبقات من الكيك الطري مع لمسة كرانش مقرمشة وصوص شوكولاتة لذيذ.",
+        descEn: "Rich chocolate cake with soft cake layers, a delicious crunchy texture, and a smooth chocolate sauce.",
+        calories: "520",
+        sizes: [
+            { nameAr: "عادي", nameEn: "Regular", priceAr: "24.00 ريال", priceEn: "24.00 SAR", val: 24 }
+        ]
+    },
+     {
+        category: "desserts", 
+        image: "assets/Lava Cake.jpeg", 
+        nameAr: "لافا كيك",
+        nameEn: "Lava Cake",
+        descAr: "",
+        descEn: "",
+        calories: "480",
+        sizes: [
+            { nameAr: "عادي", nameEn: "Regular", priceAr: "29.00 ريال", priceEn: "29.00 SAR", val: 29 }
+        ]
+    },
+     {
+        category: "desserts", 
+        image: "assets/Cheesecake.jpeg", 
+        nameAr: "تشيز كيك مقلوب",
+        nameEn: "Cheesecake",
+        descAr: "",
+        descEn: "",
+        calories: "450",
+        sizes: [
+            { nameAr: "عادي", nameEn: "Regular", priceAr: "28.00 ريال", priceEn: "28.00 SAR", val: 28 }
+        ]
+    },
     {
         category: "Winter Lucille", 
         image: "assets/Karak tea.jpeg", 
