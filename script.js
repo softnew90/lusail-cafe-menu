@@ -261,9 +261,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // -- إضافة الجملة الجديدة أسفل الترحيب --
         const subtitleMsg = document.createElement('h3');
         subtitleMsg.id = 'subtitle-message';
-        subtitleMsg.setAttribute('data-ar', 'مقهي لوسيل الدور التالت');
+        subtitleMsg.setAttribute('data-ar', 'مقهي لوسيل الدور الثالث');
         subtitleMsg.setAttribute('data-en', 'Lusail Cafe 3rd Floor');
-        subtitleMsg.textContent = currentLang === 'ar' ? 'مقهي لوسيل الدور التالت' : 'Lusail Cafe 3rd Floor';
+        subtitleMsg.textContent = currentLang === 'ar' ? 'مقهي لوسيل الدور الثالث' : 'Lusail Cafe 3rd Floor';
         
         subtitleMsg.style.marginTop = '5px'; // مسافة بسيطة من العنوان الذي فوقه
         subtitleMsg.style.marginBottom = '0';
