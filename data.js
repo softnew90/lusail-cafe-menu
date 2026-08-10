@@ -642,6 +642,18 @@ const menuItems = [
             { nameAr: "عادي", nameEn: "Regular", priceAr: "28.00 ريال", priceEn: "28.00 SAR", val: 28 }
         ]
     },
+     {
+        category: "cold", 
+        image: "assets/Matcha.jpeg", 
+        nameAr: "ماتشا",
+        nameEn: "Matcha",
+        descAr: "مشروب ماتشا ناعم ومنعش، يتميز بنكهة الشاي الأخضر الغنية ولمسة خفيفة من المرارة.",
+        descEn: "Smooth and refreshing matcha drink with a rich green tea flavor and a subtle hint of bitterness.",
+        calories: "120",
+        sizes: [
+            { nameAr: "عادي", nameEn: "Regular", priceAr: "22.00 ريال", priceEn: "22.00 SAR", val: 22 }
+        ]
+    },
     {
         category: "Winter Lucille", 
         image: "assets/Karak tea.jpeg", 
