@@ -20,10 +20,11 @@ const categoriesData = [
     { id: "cold", icon: "fa-snowflake", nameAr: "مشروبات باردة", nameEn: "Cold Drinks" },
     { id: "Soft Drinks", icon: "fa-solid fa-glass-water", nameAr: "المشروبات الغازية", nameEn: "Soft Drinks" },
     { id: "desserts", icon: "fa-cake-candles", nameAr: "حلويات وكيك", nameEn: "Desserts & Cake" },
-    { id: "Winter Lucille", icon: "fa-solid fa-cloud", nameAr: "شتاء لوسيل", nameEn: "Winter Lucille" },
+    { id: "new", icon: "fa-fire", nameAr: "جديد لوسيل", nameEn: "New at Lucille" },
     { id: "specialty", icon: "fa-coffee", nameAr: "قهوة مختصة", nameEn: "Specialty Coffee" },
     { id: "baked", icon: "fa-bread-slice", nameAr: "مخبوزات", nameEn: "Baked goods" },
-    { id: "Lucille Summer", icon: "fa-sun", nameAr: "صيف لوسيل", nameEn: "Lucille Summer" }
+    { id: "Lucille Summer", icon: "fa-sun", nameAr: "صيف لوسيل", nameEn: "Lucille Summer" },
+    { id: "Winter Lucille", icon: "fa-solid fa-cloud", nameAr: "شتاء لوسيل", nameEn: "Winter Lucille" }
 ];
 
 // 2. قاعدة بيانات المنتجات
@@ -31,8 +32,8 @@ const menuItems = [
    {
         category: "hot", 
         image: "assets/1.jpg", 
-        nameAr: "دلة قهوة عربية",
-        nameEn: "Arabic Coffee Dallah",
+        nameAr: " قهوة عربية",
+        nameEn: "Arabic Coffee",
         descAr: "",
         descEn: "",
         sizes: [
@@ -104,18 +105,6 @@ const menuItems = [
             { nameAr: "عادي", nameEn: "Regular", priceAr: "14.00 ريال", priceEn: "14.00 SAR", val: 14 }
         ]
     },
-    {
-        category: "hot", 
-        image: "assets/Tea.png", 
-        nameAr: "شاي",
-        nameEn: "Tea",
-        descAr: "شاي أحمر",
-        descEn: "Red Tea",
-        calories: "50",
-        sizes: [
-            { nameAr: "عادي", nameEn: "Regular", priceAr: "8.00 ريال", priceEn: "8.00 SAR", val: 8 }
-        ]
-    },
      {
         category: "hot", 
         image: "assets/Flat white.png", 
@@ -154,7 +143,7 @@ const menuItems = [
     },
      {
         category: "hot", 
-        image: "assets/French Hazelnut Coffee.png", 
+        image: "assets/French Hazelnut Coffee.jpeg", 
         nameAr: "قهوة فرنسية بالبندق",
         nameEn: "French Hazelnut Coffee",
         descAr: "",
@@ -214,7 +203,7 @@ const menuItems = [
     },
      {
         category: "hot", 
-        image: "assets/Hot Chocolate.png", 
+        image: "assets/Hot Chocolate.jpeg", 
         nameAr: "هوت شوكلت",
         nameEn: "Hot Chocolate",
         descAr: "",
@@ -310,7 +299,7 @@ const menuItems = [
     },
      {
         category: "cold",
-        image: "assets/Iced Vanilla Latte.png",
+        image: "assets/Iced Vanilla Latte.jpeg",
         nameAr: "آيس فانيليا لاتيه",
         nameEn: "Iced Vanilla Latte",
         descAr: "",
@@ -447,7 +436,7 @@ const menuItems = [
      {
         category: "desserts", 
         image: "assets/London Cake.png", 
-        nameAr: "كيكة لندن",
+        nameAr: "لندن كيك",
         nameEn: "London Cake",
         descAr: "",
         descEn: "",
@@ -475,8 +464,8 @@ const menuItems = [
      {
         category: "desserts", 
         image: "assets/Chocolate Cake with Ice Cream.png", 
-        nameAr: "شوكو كيك بالأيس كريم",
-        nameEn: "Chocolate Cake with Ice Cream",
+        nameAr: "شوكو كيك كريم",
+        nameEn: "Chocolate Cake Cream",
         descAr: "",
         descEn: "",
         calories: "620",

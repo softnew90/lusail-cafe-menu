@@ -244,9 +244,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const welcomeMsg = document.createElement('h2');
         welcomeMsg.id = 'welcome-message';
         // إضافة السمات الخاصة باللغتين ليتم التبديل بينهما تلقائياً
-        welcomeMsg.setAttribute('data-ar', 'مرحباً بكم في لوسيل');
-        welcomeMsg.setAttribute('data-en', 'Welcome to Lusail');
-        welcomeMsg.textContent = currentLang === 'ar' ? 'مرحباً بكم في لوسيل' : 'Welcome to Lusail';
+        welcomeMsg.setAttribute('data-ar', 'مقهي لوسيل');
+        welcomeMsg.setAttribute('data-en', 'Lusail Cafe');
+        welcomeMsg.textContent = currentLang === 'ar' ? 'مقهي لوسيل' : 'Lusail Cafe';
         
         // تنسيقات النص ليكون أنيقاً ومتناسقاً
         welcomeMsg.style.marginTop = '15px';
@@ -261,9 +261,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // -- إضافة الجملة الجديدة أسفل الترحيب --
         const subtitleMsg = document.createElement('h3');
         subtitleMsg.id = 'subtitle-message';
-        subtitleMsg.setAttribute('data-ar', 'مقهي لوسيل الدور الثالث');
-        subtitleMsg.setAttribute('data-en', 'Lusail Cafe 3rd Floor');
-        subtitleMsg.textContent = currentLang === 'ar' ? 'مقهي لوسيل الدور الثالث' : 'Lusail Cafe 3rd Floor';
+        subtitleMsg.setAttribute('data-ar', 'يرحب بكم');
+        subtitleMsg.setAttribute('data-en', 'Welcomes you');
+        subtitleMsg.textContent = currentLang === 'ar' ? 'يرحب بكم' : 'Welcomes you';
         
         subtitleMsg.style.marginTop = '5px'; // مسافة بسيطة من العنوان الذي فوقه
         subtitleMsg.style.marginBottom = '0';
