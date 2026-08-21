@@ -167,7 +167,7 @@ const menuItems = [
     },
      {
         category: "hot", 
-        image: "assets/Hazelnut Latte Hot.png", 
+        image: "assets/Iced Latte.jpeg", 
         nameAr: "سبانش لاتيه حار",
         nameEn: "Spanish Latte Hot",
         descAr: "",
