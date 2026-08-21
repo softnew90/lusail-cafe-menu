@@ -131,8 +131,8 @@ const menuItems = [
     },
     {
         category: "hot", 
-        image: "assets/Machiato.png", 
-        nameAr: "ماكياتو",
+        image: "assets/Machiato.jpeg", 
+        nameAr: "ميكاتو",
         nameEn: "Machiato",
         descAr: "",
         descEn: "",
@@ -287,7 +287,7 @@ const menuItems = [
     },
      {
         category: "cold",
-        image: "assets/Iced Latte.png",
+        image: "assets/Iced Latte.jpeg",
         nameAr: "آيس لاتيه",
         nameEn: "Iced Latte",
         descAr: "",
@@ -806,7 +806,7 @@ const menuItems = [
      {
         category: "Lucille Summer", 
         image: "assets/Ice cream.jpeg", 
-        nameAr: "ايسكريم",
+        nameAr: "ايس كريم",
         nameEn: "Ice cream",
         descAr: "متعدد النكهات فانيلا - فراوله",
         descEn: "",
@@ -820,7 +820,7 @@ const menuItems = [
      {
         category: "Lucille Summer", 
         image: "assets/Ice Cream with cookie.jpeg", 
-        nameAr: "ايسكريم مع كوكيز",
+        nameAr: "ايس كريم مع كوكيز",
         nameEn: "Ice Cream with cookie",
         descAr: "",
         descEn: "",
