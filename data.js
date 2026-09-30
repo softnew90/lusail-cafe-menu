@@ -831,4 +831,18 @@ const menuItems = [
             { nameAr: "عادي", nameEn: "Regular", priceAr: "18.00 ريال", priceEn: "18.00 SAR", val: 18 }
         ]
     },
+    {
+        category: "new", 
+        image: "assets/Ice Cream with cookie.jpeg", 
+        nameAr: "تورته",
+        nameEn: "cake",
+        descAr: "",
+        descEn: "",
+        calories: "714",
+        allergensAr: "حليب - بيض - القمح",
+        allergensEn: "Milk - egg - wheat",
+        sizes: [
+            { nameAr: "عادي", nameEn: "Regular", priceAr: "10.00 ريال", priceEn: "10.00 SAR", val: 10 }
+        ]
+    },
 ];
