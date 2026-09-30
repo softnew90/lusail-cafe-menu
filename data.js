@@ -833,7 +833,7 @@ const menuItems = [
     },
     {
         category: "new", 
-        image: "assets/Ice Cream with cookie.jpeg", 
+        image: "assets/IMG-20260930-WA0013.jpg", 
         nameAr: "تورته",
         nameEn: "cake",
         descAr: "",
